@@ -6,7 +6,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2 class="text-dark">Daftar Pasien</h2>
 
-        <a href="#" class="btn btn-success shadow-sm">
+        <a href="{{route('pasien.create')}}" class="btn btn-success shadow-sm">
             <i class="bi bi-plus-lg"></i> + Tambah Pasien
         </a>
     </div>
