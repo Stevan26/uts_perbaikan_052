@@ -38,7 +38,7 @@
                                     Edit
                                 </a>
 
-                                <form action="#" method="POST"
+                                <form action="{{ route('pasien.destroy', $item->id) }}" method="POST"
                                       style="width: 48%;"
                                       onsubmit="return confirm('Yakin ingin menghapus buku ini?')">
                                     @csrf
