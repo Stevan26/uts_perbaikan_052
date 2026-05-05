@@ -34,7 +34,7 @@
 
 
                             <div class="d-flex justify-content-between mt-2">
-                                <a href="#" class="btn btn-warning btn-sm text-white" style="width: 48%;">
+                                <a href="{{route('pasien.edit',$item->id)}}" class="btn btn-warning btn-sm text-white" style="width: 48%;">
                                     Edit
                                 </a>
 

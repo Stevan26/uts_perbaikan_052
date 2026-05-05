@@ -11,3 +11,8 @@ Route::get('/pasien/tambah', [PasienController::class, 'tambah'])
     ->name('pasien.create');
 Route::post('/pasien', [PasienController::class, 'simpan'])
     ->name('pasien.store');
+
+Route::get('/pasien/{id}/edit', [PasienController::class, 'edit'])
+    ->name('pasien.edit');
+Route::put('/pasien/{id}', [PasienController::class, 'update'])
+    ->name('pasien.update');

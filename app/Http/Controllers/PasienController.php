@@ -29,4 +29,26 @@ class PasienController extends Controller
         ]);
         return redirect()->route('pasien.index');
 }
+
+    public function edit($id)
+    {
+        $pasien = Pasien::findOrFail($id);
+        return view(
+            'editan.edit',
+            compact('pasien')
+        );
+    }
+
+    public function update(Request $request, $id)
+    {
+        $pasien = Pasien::findOrFail($id);
+        $pasien->update([
+            'no_rekam_medis' => $request->no_rekam_medis,
+            'nama_pasien' => $request->nama_pasien,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'umur' => $request->umur
+        ]);
+        return redirect()->route('pasien.index');
+    
+    }
 }
